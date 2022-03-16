@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:repromedics_healthcare_app/views/HomeView.dart';
-import 'package:repromedics_healthcare_app/views/MenuBar.dart';
-import 'package:repromedics_healthcare_app/views/sign_in.dart';
-import 'package:repromedics_healthcare_app/views/reproductive_health.dart';
-import 'package:repromedics_healthcare_app/views/registration.dart';
-import 'package:repromedics_healthcare_app/views/profile_details.dart';
-import 'package:repromedics_healthcare_app/views/mental_health.dart';
-import 'package:repromedics_healthcare_app/views/doctor_appointment_details.dart';
-import 'package:repromedics_healthcare_app/views/counsellor_appointment_details.dart';
-import 'package:repromedics_healthcare_app/views/Community_View.dart';
-import 'package:repromedics_healthcare_app/views/HomeView.dart';
-import 'package:repromedics_healthcare_app/views/book_appointment.dart';
+import 'package:flutter/services.dart';
+import 'package:repromedics_healthcare_app/views/RunningArea.dart';
+import 'package:repromedics_healthcare_app/views/Sign_Up.dart';
 import 'package:repromedics_healthcare_app/views/aboutDoctor.dart';
 
 void main() {
@@ -22,14 +13,11 @@ class ReproMedicsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var snapshot2 = null;
-    return MaterialApp(
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'ReproMedics',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MenuBar(),
+      home: RunningArea(),
     );
   }
 }

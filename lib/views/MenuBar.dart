@@ -10,28 +10,27 @@ class MenuBar extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text("Mary Ann"),
-            accountEmail: Text("maryann@gmail.com"),
-            currentAccountPicture: CircleAvatar(
-              child: ClipOval(
-                child: Image.asset(
-                  "assets/images/profile.jpg",
-                  width: 90,
-                  height: 90,
+              accountName: Text("Mary Ann"),
+              accountEmail: Text("maryann@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                child: ClipOval(
+                  child: Image.asset(
+                    "assets/images/profile.jpg",
+                    width: 90,
+                    height: 90,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(64, 131, 159, 1),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "",
+                  ),
                   fit: BoxFit.cover,
                 ),
-              ),
-            ),
-            decoration: BoxDecoration(
-              color: Color.fromRGBO(64, 131, 159, 1),
-              image: DecorationImage(
-                image: NetworkImage(
-                  "https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                ),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+              )),
           ListTile(
             leading: Icon(Icons.inbox),
             title: Text("Inbox"),
@@ -65,11 +64,11 @@ class MenuBar extends StatelessWidget {
             onTap: () => null,
             trailing: Container(
               color: Color.fromRGBO(64, 131, 159, 1),
-              width: 20,
-              height: 20,
+              width: 200,
+              height: 30,
               child: Center(
                 child: Text(
-                  '13',
+                  '191/ 112/ 18555/0302773900',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 12,
@@ -84,11 +83,11 @@ class MenuBar extends StatelessWidget {
             onTap: () => null,
             trailing: Container(
               color: Color.fromRGBO(64, 131, 159, 1),
-              width: 20,
-              height: 20,
+              width: 200,
+              height: 30,
               child: Center(
                 child: Text(
-                  '13',
+                  '193/ 112',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 12,
@@ -103,11 +102,11 @@ class MenuBar extends StatelessWidget {
             onTap: () => null,
             trailing: Container(
               color: Color.fromRGBO(64, 131, 159, 1),
-              width: 20,
-              height: 20,
+              width: 200,
+              height: 30,
               child: Center(
                 child: Text(
-                  '13',
+                  '192/ 112',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 12,
@@ -122,11 +121,11 @@ class MenuBar extends StatelessWidget {
             onTap: () => null,
             trailing: Container(
               color: Color.fromRGBO(64, 131, 159, 1),
-              width: 20,
-              height: 20,
+              width: 200,
+              height: 30,
               child: Center(
                 child: Text(
-                  '13',
+                  '+233-302-522902',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 12,
