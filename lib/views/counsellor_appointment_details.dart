@@ -25,7 +25,7 @@ class CounsellorAppointmentDetail extends StatelessWidget {
           ],
         ),
 
-        title: Text('Repromedics'),
+        title: Text('Counsellor Appointment'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
@@ -43,7 +43,7 @@ class CounsellorAppointmentDetail extends StatelessWidget {
         ],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
-      ),
+        ),
       ),
       body: Form(
         child: ListView(padding: EdgeInsets.all(15), children: [

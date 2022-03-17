@@ -25,7 +25,7 @@ class MentalHealth extends StatelessWidget {
           ],
         ),
 
-        title: Text('Repromedics'),
+        title: Text('Mental Health'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),

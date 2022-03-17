@@ -25,7 +25,7 @@ class CommunityView extends StatelessWidget {
           ],
         ),
 
-        title: Text('Repromedics'),
+        title: Text('Communities'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
@@ -43,7 +43,7 @@ class CommunityView extends StatelessWidget {
         ],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
-      ),
+        ),
       ),
       body: ListView(padding: EdgeInsets.all(40), children: [
         Container(

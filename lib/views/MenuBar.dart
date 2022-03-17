@@ -26,7 +26,7 @@ class MenuBar extends StatelessWidget {
                 color: Color.fromRGBO(64, 131, 159, 1),
                 image: DecorationImage(
                   image: NetworkImage(
-                    "",
+                    "https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
                   ),
                   fit: BoxFit.cover,
                 ),

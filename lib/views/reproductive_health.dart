@@ -25,7 +25,7 @@ class ReproductiveHealth extends StatelessWidget {
           ],
         ),
 
-        title: Text('Repromedics'),
+        title: Text('Reproductive Health'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
