@@ -10,27 +10,40 @@ class MentalHealth extends StatelessWidget {
       backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
         //elevation:15,
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Color.fromRGBO(64, 131, 159, 1),
         centerTitle: true,
         leading: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-                onPressed: () {}, child: Icon(Icons.arrow_back_outlined)),
+              onPressed: () {},
+              child: Icon(
+                Icons.arrow_back_outlined,
+                color: Colors.white,
+              ),
+            ),
           ],
         ),
 
-        title: Text('Mental Health'),
+        title: Text('Repromedics'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: CircleAvatar(
-              radius: 30,
-              backgroundImage: NetworkImage(
-                  'https://image.shutterstock.com/image-photo/patient-having-consultation-female-doctor-260nw-534962014.jpg'),
+              child: ClipOval(
+                child: Image.asset(
+                  "assets/images/profile.jpg",
+                  width: 90,
+                  height: 90,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ),
         ],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
+      ),
       ),
       body: ListView(padding: EdgeInsets.all(30), children: [
         Card(

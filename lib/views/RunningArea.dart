@@ -18,56 +18,56 @@ class RunningArea extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          Container(
-            height: 100,
-            color: Color.fromRGBO(64, 131, 159, 1),
-            child: Align(),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              height: 100,
+              color: const Color.fromRGBO(64, 131, 159, 1),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: ListView(
+              children: <Widget>[
+                Column(
+                  children: [
+                    Text(
+                      "Reviews",
+                      style: TextStyle(color: Colors.black, fontSize: 11),
+                    ),
+                    CircleAvatar(
+                      child: Image(
+                        image: AssetImage("assets/images/profile.jpg"),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Column(children: [
+                          Text(
+                            "David Seth",
+                            style: TextStyle(color: Colors.black, fontSize: 11),
+                          ),
+                          Text(
+                            "Many thanks to Doctor Naa , she is a professional, competent doctor....",
+                            style: TextStyle(color: Colors.black, fontSize: 11),
+                          ),
+                        ])
+                      ],
+                    ),
+                    CircleAvatar(
+                      child: Image(
+                        image: AssetImage("assets/images/profile.jpg"),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: ListView(
               children: <Widget>[
-                Card(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        //border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(10)),
-                    margin: const EdgeInsets.fromLTRB(20, 300, 20, 10),
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 25),
-                    child: Column(
-                      children: <Widget>[
-                        TextField(
-                          decoration: InputDecoration(
-                              icon: const Icon(
-                                Icons.email,
-                                color: Color.fromRGBO(64, 131, 159, 1),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Colors.grey.shade100)),
-                              labelText: "Email",
-                              enabledBorder: InputBorder.none,
-                              labelStyle: const TextStyle(color: Colors.grey)),
-                        ),
-                        TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                              icon: const Icon(
-                                Icons.vpn_key,
-                                color: Color.fromRGBO(64, 131, 159, 1),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Colors.grey.shade100)),
-                              labelText: "Password",
-                              enabledBorder: InputBorder.none,
-                              labelStyle: const TextStyle(color: Colors.grey)),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
                 Align(
                     alignment: Alignment.centerRight,
                     child: Container(
@@ -81,6 +81,11 @@ class RunningArea extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
+                      CircleAvatar(
+                        child: const Image(
+                          image: AssetImage("assets/images/profile.jpg"),
+                        ),
+                      ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.5,
                         height: 40,
@@ -113,44 +118,54 @@ class RunningArea extends StatelessWidget {
                                   end: Alignment.bottomCenter)),
                         ),
                       ),
-                      FloatingActionButton(
-                        onPressed: () {},
-                        mini: true,
-                        elevation: 0,
+                      CircleAvatar(
                         child: const Image(
-                          image: AssetImage("assets/images/facebook2.jpg"),
-                        ),
-                      ),
-                      FloatingActionButton(
-                        onPressed: () {},
-                        mini: true,
-                        elevation: 0,
-                        child: const Image(
-                          image: AssetImage("assets/images/twitter.jpg"),
+                          image: AssetImage("assets/images/profile.jpg"),
                         ),
                       ),
                     ],
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    Text(
-                      "DON'T HAVE AN ACCOUNT ? ",
-                      style: TextStyle(
-                          fontSize: 11,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      " SIGN UP",
-                      style: TextStyle(
-                          fontSize: 11,
-                          color: Color.fromRGBO(64, 131, 159, 1),
-                          fontWeight: FontWeight.w700),
-                    )
-                  ],
-                )
+                Container(
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        height: 40,
+                        child: Container(
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.transparent,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(20),
+                              splashColor: Colors.amber,
+                              onTap: () {},
+                              child: const Center(
+                                child: Text(
+                                  "Book Appoinment",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: const LinearGradient(
+                                  colors: [
+                                    Color.fromRGBO(64, 131, 159, 1),
+                                    Color.fromRGBO(64, 131, 159, -100),
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )

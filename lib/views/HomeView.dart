@@ -75,6 +75,9 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
         ],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
+          ),
       ),
       body: ListView.builder(
           itemCount: imgList.length,

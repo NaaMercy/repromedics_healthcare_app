@@ -136,7 +136,7 @@ class SignIn extends StatelessWidget {
                         FloatingActionButton(
                           onPressed: () {},
                           mini: true,
-                          elevation: 0,
+                          elevation: 20,
                           child: const Image(
                             image: AssetImage("assets/images/facebook2.jpg"),
                           ),
@@ -144,7 +144,7 @@ class SignIn extends StatelessWidget {
                         FloatingActionButton(
                           onPressed: () {},
                           mini: true,
-                          elevation: 0,
+                          elevation: 20,
                           child: const Image(
                             image: AssetImage("assets/images/twitter.jpg"),
                           ),

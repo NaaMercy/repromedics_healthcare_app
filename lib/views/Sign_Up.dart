@@ -25,6 +25,9 @@ class SignUp extends StatelessWidget {
           ],
         ),
         title: Text('Sign Up'),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(16))
+        ),
       ),
       body: Form(
         child: ListView(padding: EdgeInsets.all(15), children: [
