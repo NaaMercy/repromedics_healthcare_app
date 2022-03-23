@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:repromedics_healthcare_app/views/sign_in.dart';
 
-class SignUp extends StatelessWidget {
+import 'HomeView.dart';
+
+class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
 
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +23,10 @@ class SignUp extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => const SignIn()));
+              },
               child: Icon(
                 Icons.arrow_back_outlined,
                 color: Colors.white,
@@ -26,8 +36,7 @@ class SignUp extends StatelessWidget {
         ),
         title: Text('Sign Up'),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(16))
-        ),
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(16))),
       ),
       body: Form(
         child: ListView(padding: EdgeInsets.all(15), children: [
@@ -106,7 +115,10 @@ class SignUp extends StatelessWidget {
             width: 10,
             height: 30,
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const HomeView()));
+                },
                 child: Text(
                   "Sign Up",
                   style: TextStyle(

@@ -76,6 +76,10 @@ flutter:
     - "assets/images/linkedin.jpg"
     - "assets/images/twitter.jpg"
     - "assets/images/sign in.jpg"
+    - "assets/images/doctorprofile.jpg"
+    - "assets/images/doctorprofilemale.jpg"
+    - "assets/images/doctorprofilebackground.jpg"
+    
     
 
 

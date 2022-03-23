@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:repromedics_healthcare_app/views/book_appointment.dart';
 
-class CounsellorAppointmentDetail extends StatelessWidget {
+class CounsellorAppointmentDetail extends StatefulWidget {
   const CounsellorAppointmentDetail({Key? key}) : super(key: key);
 
   @override
+  State<CounsellorAppointmentDetail> createState() =>
+      _CounsellorAppointmentDetailState();
+}
+
+class _CounsellorAppointmentDetailState
+    extends State<CounsellorAppointmentDetail> {
+  @override
   Widget build(BuildContext context) {
+    int _selectedIndex = 0;
+
+    void _onItemTapped(int index) {
+      setState(() {
+        _selectedIndex = index;
+      });
+    }
+
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(1.0),
       appBar: AppBar(
@@ -150,7 +165,7 @@ class CounsellorAppointmentDetail extends StatelessWidget {
                     color: Colors.white),
               ),
               style: TextButton.styleFrom(
-                backgroundColor: Colors.redAccent,
+                backgroundColor: Color.fromRGBO(64, 131, 159, 1),
               )),
         ]),
       ),

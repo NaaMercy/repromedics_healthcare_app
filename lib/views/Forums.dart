@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:repromedics_healthcare_app/views/homeview.dart';
 
-class CommunityView extends StatefulWidget {
-  const CommunityView({Key? key}) : super(key: key);
+class Forums extends StatefulWidget {
+  const Forums({Key? key}) : super(key: key);
 
   @override
-  State<CommunityView> createState() => _CommunityViewState();
+  State<Forums> createState() => _ForumsState();
 }
 
-class _CommunityViewState extends State<CommunityView> {
+class _ForumsState extends State<Forums> {
   @override
   Widget build(BuildContext context) {
     int _selectedIndex = 0;
@@ -20,7 +19,6 @@ class _CommunityViewState extends State<CommunityView> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.8),
       appBar: AppBar(
         //elevation:15,
         backgroundColor: Color.fromRGBO(64, 131, 159, 1),
@@ -38,8 +36,7 @@ class _CommunityViewState extends State<CommunityView> {
           ],
         ),
 
-        title:
-            Text('Communities', style: TextStyle(fontWeight: FontWeight.w900)),
+        title: Text('Communities'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
@@ -59,71 +56,90 @@ class _CommunityViewState extends State<CommunityView> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
         ),
       ),
-      body: ListView(padding: EdgeInsets.all(40), children: [
-        Container(
-          height: 80,
-          child: Card(
-            color: Colors.white70,
-            child: ListTile(
-              title: Text(
-                'Reproductive Health',
+      body: GridView.count(
+        // Create a grid with 2 columns. If you change the scrollDirection to
+        // horizontal, this produces 2 rows.
+        crossAxisCount: 2,
+        // Generate 100 widgets that display their index in the List.
+
+        children: [
+          Card(
+            color: Colors.deepPurpleAccent,
+            child: Stack(
+              overflow: Overflow.visible,
+              children: <Widget>[
+                Container(
+                  height: 300,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/forum.jpg"),
+                      fit: BoxFit.fitWidth,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                  child: Text(
+                    'Social Discussions',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.black45,
+                        fontWeight: FontWeight.w900),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 200,
+            width: 200,
+            child: Card(
+              color: Colors.deepPurpleAccent,
+              shadowColor: Colors.black,
+              child: Text(
+                'Social Discussions',
                 style: TextStyle(
                     fontSize: 25,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.black),
+                    color: Colors.black45,
+                    fontWeight: FontWeight.w900),
+                textAlign: TextAlign.center,
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 20.0),
-        Container(
-          height: 80,
-          child: Card(
-            color: Colors.white70,
-            child: ListTile(
-              title: Text(
-                'Mental Health',
+          Container(
+            height: 200,
+            width: 200,
+            child: Card(
+              color: Colors.deepPurpleAccent,
+              shadowColor: Colors.black,
+              child: Text(
+                'Social Discussions',
                 style: TextStyle(
                     fontSize: 25,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.black),
+                    color: Colors.black45,
+                    fontWeight: FontWeight.w900),
+                textAlign: TextAlign.center,
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 20.0),
-        Container(
-          height: 80,
-          child: Card(
-            color: Colors.white70,
-            child: ListTile(
-              title: Text(
-                'Drugs/Addictions',
+          Container(
+            height: 200,
+            width: 200,
+            child: Card(
+              color: Colors.deepPurpleAccent,
+              shadowColor: Colors.black,
+              child: Text(
+                'Social Discussions',
                 style: TextStyle(
                     fontSize: 25,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.black),
+                    color: Colors.black45,
+                    fontWeight: FontWeight.w900),
+                textAlign: TextAlign.center,
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 20.0),
-        Container(
-          height: 80,
-          child: Card(
-            color: Colors.white70,
-            child: ListTile(
-              title: Text(
-                'Others',
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.black),
-              ),
-            ),
-          ),
-        ),
-      ]),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromRGBO(64, 131, 159, 1),
         items: const <BottomNavigationBarItem>[

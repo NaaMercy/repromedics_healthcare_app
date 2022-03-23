@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:repromedics_healthcare_app/views/HomeView.dart';
+import 'package:repromedics_healthcare_app/views/aboutDoctor.dart';
 import 'package:repromedics_healthcare_app/views/doctor_appointment_details.dart';
 import 'package:repromedics_healthcare_app/views/counsellor_appointment_details.dart';
 
@@ -31,7 +33,10 @@ class _BookAppointment extends State<BookAppointment> {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const HomeView()));
+              },
               child: Icon(
                 Icons.arrow_back_outlined,
                 color: Colors.white,
@@ -78,53 +83,6 @@ class _BookAppointment extends State<BookAppointment> {
                       fontWeight: FontWeight.w500,
                       color: Colors.grey),
                 ),
-                trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  TextButton(
-                      onPressed: () {},
-                      child: const Icon(Icons.star_rate_sharp))
-                ]),
-              ),
-              ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(''),
-                ),
-                title: Text(
-                  'Dr. Mercy Adoley Quaye',
-                  style: TextStyle(
-                      fontSize: 19,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-                subtitle: Text(
-                  'Surgean @ Apinto Govt Hospital',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.grey),
-                ),
-                trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  TextButton(
-                      onPressed: () {}, child: const Icon(Icons.calendar_month))
-                ]),
-              ),
-              ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(''),
-                ),
-                title: Text(
-                  'Dr. Mercy Adoley Quaye',
-                  style: TextStyle(
-                      fontSize: 19,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-                subtitle: Text(
-                  'Surgean @ Apinto Govt Hospital',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.grey),
-                ),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -135,7 +93,12 @@ class _BookAppointment extends State<BookAppointment> {
                           color: Color.fromRGBO(64, 131, 159, 1),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
                         child: Text(
                           'Book',
                           style: TextStyle(color: Colors.white, fontSize: 15),
@@ -173,7 +136,12 @@ class _BookAppointment extends State<BookAppointment> {
                           color: Color.fromRGBO(64, 131, 159, 1),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
                         child: Text(
                           'Book',
                           style: TextStyle(color: Colors.white, fontSize: 15),
@@ -211,7 +179,12 @@ class _BookAppointment extends State<BookAppointment> {
                           color: Color.fromRGBO(64, 131, 159, 1),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
                         child: Text(
                           'Book',
                           style: TextStyle(color: Colors.white, fontSize: 15),
@@ -249,7 +222,12 @@ class _BookAppointment extends State<BookAppointment> {
                           color: Color.fromRGBO(64, 131, 159, 1),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
                         child: Text(
                           'Book',
                           style: TextStyle(color: Colors.white, fontSize: 15),
@@ -287,7 +265,98 @@ class _BookAppointment extends State<BookAppointment> {
                           color: Color.fromRGBO(64, 131, 159, 1),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
+                        child: Text(
+                          'Book',
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(''),
+                ),
+                title: Text(
+                  'Dr. Mercy Adoley Quaye',
+                  style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
+                ),
+                subtitle: Text(
+                  'Surgean @ Apinto Govt Hospital',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey),
+                ),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(64, 131, 159, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
+                        child: Text(
+                          'Book',
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(''),
+                ),
+                title: Text(
+                  'Dr. Mercy Adoley Quaye',
+                  style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
+                ),
+                subtitle: Text(
+                  'Surgean @ Apinto Govt Hospital',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey),
+                ),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(64, 131, 159, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const AboutDoctor()));
+                        },
                         child: Text(
                           'Book',
                           style: TextStyle(color: Colors.white, fontSize: 15),

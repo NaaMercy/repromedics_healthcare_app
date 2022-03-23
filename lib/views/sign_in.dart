@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:repromedics_healthcare_app/views/Sign_Up.dart';
+
+import 'HomeView.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -111,7 +114,12 @@ class SignIn extends StatelessWidget {
                               child: InkWell(
                                 borderRadius: BorderRadius.circular(20),
                                 splashColor: Colors.amber,
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) => const HomeView()));
+                                },
                                 child: const Center(
                                   child: Text(
                                     "SIGN IN",
@@ -142,7 +150,9 @@ class SignIn extends StatelessWidget {
                           ),
                         ),
                         FloatingActionButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            //Navigator.push(context, MaterialPageRoute(builder: (_)=>const HomeView()));
+                          },
                           mini: true,
                           elevation: 20,
                           child: const Image(
@@ -154,7 +164,7 @@ class SignIn extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Text(
                         "DON'T HAVE AN ACCOUNT ? ",
                         style: TextStyle(
@@ -162,13 +172,22 @@ class SignIn extends StatelessWidget {
                             color: Colors.black,
                             fontWeight: FontWeight.w500),
                       ),
-                      Text(
-                        " SIGN UP",
-                        style: TextStyle(
-                            fontSize: 11,
-                            color: Color.fromRGBO(64, 131, 159, 1),
-                            fontWeight: FontWeight.w700),
-                      )
+
+                      ElevatedButton(
+                        child: Text('SIGN UP'),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const SignUp()));
+                        },
+                      ),
+
+                      // Text(" SIGN UP",
+                      //     style: TextStyle(
+                      //         fontSize: 11,
+                      //         color: Color.fromRGBO(64, 131, 159, 1),
+                      //         fontWeight: FontWeight.w700)),
                     ],
                   )
                 ],

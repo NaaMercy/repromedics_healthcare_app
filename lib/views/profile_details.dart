@@ -8,6 +8,8 @@ class ProfileDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _selectedIndex;
+    var _onItemTapped;
     return Scaffold(
       appBar: AppBar(
         elevation: 15,
@@ -125,6 +127,34 @@ class ProfileDetails extends StatelessWidget {
             ]),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromRGBO(64, 131, 159, 1),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.messenger),
+            label: 'Message',
+            backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notification',
+            backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.menu),
+            label: 'More options',
+            backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+          )
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
     );
   }

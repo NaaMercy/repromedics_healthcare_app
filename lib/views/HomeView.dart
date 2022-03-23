@@ -46,18 +46,18 @@ class _HomeViewState extends State<HomeView> {
         //elevation:15,
         backgroundColor: Color.fromRGBO(64, 131, 159, 1),
         centerTitle: true,
-        leading: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextButton(
-              onPressed: () {},
-              child: Icon(
-                Icons.arrow_back_outlined,
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
+        // leading: Row(
+        //   mainAxisSize: MainAxisSize.min,
+        //   children: [
+        //     TextButton(
+        //       onPressed: () {},
+        //       child: Icon(
+        //         Icons.arrow_back_outlined,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //   ],
+        // ),
 
         title: Text('Repromedics'),
         actions: [
@@ -120,7 +120,103 @@ class _HomeViewState extends State<HomeView> {
                                 color: Colors.grey[500],
                               ),
                             ),
-                          )
+                          ),
+                          Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(64, 131, 159, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const BookAppointment()));
+                        },
+                        child: Text(
+                          'Book',
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(64, 131, 159, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const ReproductiveHealth()));
+                        },
+                        child: Text(
+                          'Book',
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(64, 131, 159, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const MentalHealth()));
+                        },
+                        child: Text(
+                          'Book',
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(64, 131, 159, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const CommunityView()));
+                        },
+                        child: Text(
+                          'Book',
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                         ],
                       ),
                     )
