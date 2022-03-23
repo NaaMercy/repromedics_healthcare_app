@@ -37,7 +37,7 @@ class _BookAppointment extends State<BookAppointment> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const HomeView()));
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_outlined,
                 color: Colors.white,
               ),

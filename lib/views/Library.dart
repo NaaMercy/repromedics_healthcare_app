@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:repromedics_healthcare_app/views/homeview.dart';
 
-class CommunityView extends StatefulWidget {
-  const CommunityView({Key? key}) : super(key: key);
+class Library extends StatefulWidget {
+  const Library({Key? key}) : super(key: key);
 
   @override
-  State<CommunityView> createState() => _CommunityViewState();
+  State<Library> createState() => _LibraryState();
 }
 
-class _CommunityViewState extends State<CommunityView> {
+class _LibraryState extends State<Library> {
   @override
   Widget build(BuildContext context) {
     int _selectedIndex = 0;

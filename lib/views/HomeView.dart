@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:repromedics_healthcare_app/views/reproductive_health.dart';
-import 'package:repromedics_healthcare_app/views/mental_health.dart';
-import 'package:repromedics_healthcare_app/views/community_view.dart';
+import 'package:repromedics_healthcare_app/views/Forums.dart';
+import 'package:repromedics_healthcare_app/views/Library.dart';
+import 'package:repromedics_healthcare_app/views/QuizzesFun.dart';
 import 'package:repromedics_healthcare_app/views/book_appointment.dart';
-
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -26,6 +25,13 @@ class _HomeViewState extends State<HomeView> {
     "assets/images/forum.jpg",
     "assets/images/Quizzes.jpg"
   ];
+
+  get nextList => [
+        const BookAppointment(),
+        const Library(),
+        const Forums(),
+        const QuizzesFun(),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +83,7 @@ class _HomeViewState extends State<HomeView> {
         ],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
-          ),
+        ),
       ),
       body: ListView.builder(
           itemCount: imgList.length,
@@ -85,7 +91,12 @@ class _HomeViewState extends State<HomeView> {
             return GestureDetector(
               onTap: () {
                 showDialogFunc(
-                    context, imgList[index], titlelist[index], descList[index]);
+                  context,
+                  imgList[index],
+                  titlelist[index],
+                  descList[index],
+                  nextList[index],
+                );
               },
               child: Card(
                 child: Row(
@@ -122,101 +133,30 @@ class _HomeViewState extends State<HomeView> {
                             ),
                           ),
                           Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      height: 35,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(64, 131, 159, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => const BookAppointment()));
-                        },
-                        child: Text(
-                          'Book',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      height: 35,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(64, 131, 159, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => const ReproductiveHealth()));
-                        },
-                        child: Text(
-                          'Book',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      height: 35,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(64, 131, 159, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => const MentalHealth()));
-                        },
-                        child: Text(
-                          'Book',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      height: 35,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(64, 131, 159, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => const CommunityView()));
-                        },
-                        child: Text(
-                          'Book',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Container(
+                                height: 35,
+                                width: 70,
+                                decoration: BoxDecoration(
+                                    color: Color.fromRGBO(64, 131, 159, 1),
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (_) => nextList[index]));
+                                  },
+                                  child: Text(
+                                    'Visit',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 15),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     )
@@ -257,7 +197,7 @@ class _HomeViewState extends State<HomeView> {
   }
 }
 
-showDialogFunc(context, img, title, desc) {
+showDialogFunc(context, img, title, desc, Type nextActn) {
   return showDialog(
       context: context,
       builder: (context) {

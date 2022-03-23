@@ -97,7 +97,7 @@ class _ForumsState extends State<Forums> {
               color: Colors.deepPurpleAccent,
               shadowColor: Colors.black,
               child: Text(
-                'Social Discussions',
+                'Violence',
                 style: TextStyle(
                     fontSize: 25,
                     color: Colors.black45,
@@ -113,7 +113,7 @@ class _ForumsState extends State<Forums> {
               color: Colors.deepPurpleAccent,
               shadowColor: Colors.black,
               child: Text(
-                'Social Discussions',
+                'Ask Your Question',
                 style: TextStyle(
                     fontSize: 25,
                     color: Colors.black45,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:repromedics_healthcare_app/views/doctor_appointment_details.dart';
 
 class AboutDoctor extends StatelessWidget {
   const AboutDoctor({Key? key}) : super(key: key);
@@ -148,7 +149,44 @@ class AboutDoctor extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
+            Positioned(
+              bottom: 5,
+              left: 200,
+              child: ElevatedButton(
+                child: const Text('Book Appointment'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const DoctorAppointmentDetail()));
+                },
+              ),
+            ),
+            // Positioned(
+            //   bottom: 5,
+            //   left: 0,
+            //   right: 0,
+            //   height: 100,
+            //   width: 200,
+            //   child: TextButton(
+            //       onPressed: () {
+            //         Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (_) => const DoctorAppointmentDetail()));
+            //       },
+            //       child: Text(
+            //         "Book Appointment",
+            //         style: TextStyle(
+            //             fontSize: 20,
+            //             fontWeight: FontWeight.w800,
+            //             color: Colors.white),
+            //       ),
+            //       style: TextButton.styleFrom(
+            //         backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+            //       )),
+            // ),
           ],
         ),
       ),

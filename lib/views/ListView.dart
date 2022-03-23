@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:repromedics_healthcare_app/views/reproductive_health.dart';
 import 'package:repromedics_healthcare_app/views/mental_health.dart';
-import 'package:repromedics_healthcare_app/views/community_view.dart';
+import 'package:repromedics_healthcare_app/views/Library.dart';
 import 'package:repromedics_healthcare_app/views/book_appointment.dart';
 
 class HomeView extends StatefulWidget {
