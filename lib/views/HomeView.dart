@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:repromedics_healthcare_app/views/Forums.dart';
 import 'package:repromedics_healthcare_app/views/Library.dart';
@@ -50,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         //elevation:15,
-        backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+        backgroundColor: const Color.fromRGBO(64, 131, 159, 1),
         centerTitle: true,
         // leading: Row(
         //   mainAxisSize: MainAxisSize.min,
@@ -65,7 +67,7 @@ class _HomeViewState extends State<HomeView> {
         //   ],
         // ),
 
-        title: Text('Repromedics'),
+        title: const Text('Repromedics',style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25,),),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
@@ -81,7 +83,7 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
         ],
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
         ),
       ),
@@ -98,70 +100,74 @@ class _HomeViewState extends State<HomeView> {
                   nextList[index],
                 );
               },
-              child: Card(
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      width: 100,
-                      height: 100,
-                      child: Image.asset(imgList[index]),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            titlelist[index],
-                            style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.grey,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            width: width,
-                            child: Text(
-                              descList[index],
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.grey[500],
+              child: Row(
+                children: [
+                  Card(
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          width: 100,
+                          height: 100,
+                          child: Image.asset(imgList[index]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                titlelist[index],
+                                style: const TextStyle(
+                                  fontSize: 25,
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
+                              const SizedBox(
+                                height: 10,
+                              ),
                               Container(
-                                height: 35,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromRGBO(64, 131, 159, 1),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => nextList[index]));
-                                  },
-                                  child: Text(
-                                    'Visit',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 15),
+                                width: width,
+                                child: Text(
+                                  descList[index],
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.grey[500],
                                   ),
                                 ),
                               ),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Container(
+                                    height: 35,
+                                    width: 70,
+                                    decoration: BoxDecoration(
+                                        color: Color.fromRGBO(64, 131, 159, 1),
+                                        borderRadius: BorderRadius.circular(20)),
+                                    child: TextButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (_) => nextList[index]));
+                                      },
+                                      child: const Text(
+                                        'Visit',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 13),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
               ),
             );
           }),

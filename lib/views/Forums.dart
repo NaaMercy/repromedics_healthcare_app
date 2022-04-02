@@ -21,14 +21,14 @@ class _ForumsState extends State<Forums> {
     return Scaffold(
       appBar: AppBar(
         //elevation:15,
-        backgroundColor: Color.fromRGBO(64, 131, 159, 1),
+        backgroundColor: const Color.fromRGBO(64, 131, 159, 1),
         centerTitle: true,
         leading: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
               onPressed: () {},
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_outlined,
                 color: Colors.white,
               ),
@@ -36,7 +36,7 @@ class _ForumsState extends State<Forums> {
           ],
         ),
 
-        title: Text('Communities'),
+        title: const Text('Communities'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(5.0),
@@ -52,7 +52,7 @@ class _ForumsState extends State<Forums> {
             ),
           ),
         ],
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
         ),
       ),
@@ -71,14 +71,14 @@ class _ForumsState extends State<Forums> {
                 Container(
                   height: 300,
                   width: 300,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/images/forum.jpg"),
                       fit: BoxFit.fitWidth,
                       alignment: Alignment.topCenter,
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Social Discussions',
                     style: TextStyle(
                         fontSize: 25,
@@ -93,7 +93,7 @@ class _ForumsState extends State<Forums> {
           Container(
             height: 200,
             width: 200,
-            child: Card(
+            child: const Card(
               color: Colors.deepPurpleAccent,
               shadowColor: Colors.black,
               child: Text(
@@ -109,7 +109,7 @@ class _ForumsState extends State<Forums> {
           Container(
             height: 200,
             width: 200,
-            child: Card(
+            child: const Card(
               color: Colors.deepPurpleAccent,
               shadowColor: Colors.black,
               child: Text(
@@ -125,7 +125,7 @@ class _ForumsState extends State<Forums> {
           Container(
             height: 200,
             width: 200,
-            child: Card(
+            child: const Card(
               color: Colors.deepPurpleAccent,
               shadowColor: Colors.black,
               child: Text(

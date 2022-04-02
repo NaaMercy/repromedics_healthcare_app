@@ -12,7 +12,8 @@ class AboutDoctor extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Doctor's Information"),
+        leading: IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_back) ),
+        title: const Text("Doctor's Information",),
       ),
       body: SafeArea(
         child: Stack(
@@ -20,9 +21,9 @@ class AboutDoctor extends StatelessWidget {
             StreamBuilder(
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Container(
+                  return SizedBox(
                     width: width,
-                    child: Center(
+                    child: const Center(
                       child: CircularProgressIndicator(),
                     ),
                   );
@@ -130,7 +131,7 @@ class AboutDoctor extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 border: Border.all(color: Colors.black38)),
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             height: height * 0.3,
                             width: width,
                             child: ListView(

@@ -38,6 +38,10 @@ dependencies:
   google_fonts: ^2.3.1
   cloud_firestore: ^3.1.10
   http: ^0.13.4
+  auth_buttons: ^2.0.4
+  toggle_switch: ^1.4.0
+  flutter_rating_bar: ^4.0.0
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:
